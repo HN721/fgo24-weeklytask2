@@ -17,7 +17,13 @@ function data(items) {
   const usersData = items.map((e) => ({
     name: e.name,
     city: e.address.city,
+    streets: e.address.street,
+    block: e.address.suite,
   }));
   const res = usersData.sort((a, b) => a.city.localeCompare(b.city));
-  res.forEach((e, index) => console.log(`${index + 1}. ${e.name} - ${e.city}`));
+  res.forEach((e, index) =>
+    console.log(
+      `${index + 1}. ${e.name} : ${e.city} - ${e.streets}- ${e.block}`
+    )
+  );
 }

@@ -20,5 +20,5 @@ function processData(products, err) {
     console.log(error);
   }
 }
-getDataFromServer(null, processData);
+getDataFromServer(true, processData);
 getDataFromServer(true, processData);
